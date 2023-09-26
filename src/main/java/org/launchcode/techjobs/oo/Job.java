@@ -98,7 +98,11 @@ public class Job {
         return Objects.hash(getId()); //, getName(), getEmployer(), getLocation(), getPositionType(), getCoreCompetency());
     }
 
+    @Override
     public String toString() {
+        if (this.getName() == null) {
+            setName("Data not available");
+        }
         return System.lineSeparator() +
                 "ID: " + getId() + System.lineSeparator() +
                 "Name: " + getName() + System.lineSeparator() +

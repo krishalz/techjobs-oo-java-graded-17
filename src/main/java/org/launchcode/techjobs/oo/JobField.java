@@ -25,7 +25,11 @@ public abstract class JobField {
     }
     @Override
     public String toString() {
-        return getValue();
+        if (getValue().isEmpty()) {
+            return "Data not available";
+        } else {
+            return getValue();
+        }
     }
 
     @Override
